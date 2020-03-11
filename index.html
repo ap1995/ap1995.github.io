@@ -5,13 +5,23 @@
 		<link rel="stylesheet" type="text/css" href="/css/main.css">
 	</head>
 	<body>
-		<link rel="import" href="header.html">
+		<!-- <link rel="import" href="header.html"> -->
+		<script>
+	  function handleLoad(e) {
+	    console.log('Loaded import: ' + e.target.href);
+	  }
+	  function handleError(e) {
+	    console.log('Error loading import: ' + e.target.href);
+	  }
+		</script>
+		<link rel="import" href="header.html" onload="handleLoad(event)" onerror="handleError(event)">
+
 		<div class="container">
     		<div class="blurb">
         		<h1>Hi there, I'm Ashwini!</h1>
 				<p>Data Scientist/Machine Learning Engineer/Software Engineer <a href="/about">Read more about me...</a></p>
     		</div><!-- /.blurb -->
 		</div><!-- /.container -->
-		<link rel="import" href="footer.html">
+		<!-- <link rel="import" href="footer.html"> -->
 	</body>
 </html>
